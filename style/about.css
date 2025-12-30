@@ -1,0 +1,105 @@
+/* Animation for fading in */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px); /* Starts from 20px below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); 
+    }
+}
+
+.aboutMain {
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    animation: fadeInUp 0.8s ease-out forwards;
+    user-select: none;
+}
+
+
+/* Delayed fade in for paragraphs */
+.aboutMain p {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.aboutMain p:nth-of-type(1) {
+    animation-delay: 0.3s;
+}
+
+.aboutMain p:nth-of-type(2) {
+    animation-delay: 0.5s;
+}
+
+.aboutMain p:nth-of-type(3) {
+    animation-delay: 0.7s;
+}
+
+
+.aboutMain {
+    flex: 1;
+    max-width: 850px;
+    margin: 60px auto;
+    padding: 0 20px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+.title-row {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.aboutMainTitle {
+    font-size: 45px;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+    /* Base glow */
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.9),
+        0 0 14px rgba(255, 255, 255, 0.6),
+        0 0 24px rgba(255, 255, 255, 0.4);
+}
+
+.aboutMainTitle:hover {
+    text-shadow: none;
+    background: linear-gradient(90deg, 
+        #B4D63D 0%,
+        #9FD44A 14%,
+        #86D05E 28%,
+        #6ACB78 42%,
+        #52C2A2 56%,
+        #46A9B6 70%,
+        #3F82C4 85%,
+        #3A60CA 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+
+    /* Adding the glow effect */
+    filter: drop-shadow(0 0 10px rgba(82, 194, 162, 0.6));
+}
+
+.aboutMain p {
+    font-size: 19px;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+p strong {
+    color: #91bc03;
+}
+

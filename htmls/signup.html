@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prosekator - Registruj se</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../images/prosekatorWebLogo.png">
+    <link rel="stylesheet" href="../style/header.css">
+    <link rel="stylesheet" href="../style/hamburgerBar.css">
+    <link rel="stylesheet" href="../style/signup.css">
+    <link rel="stylesheet" href="../style/footer.css">
+    <link rel="stylesheet" href="../style/scrollBar.css">
+
+    <script src="../script/hamburgerBar.js" defer></script>
+</head>
+<body>
+    
+<div class="headerDiv">
+<header class="header">
+
+    <div class="headerLogo">
+        <img src="../images/prosekatorWebLogoTransparent.png" alt="Prosekator Logo" style="margin-right: 25px;" draggable="false">
+    </div>
+
+    <div class="headerTitle">
+        <h1><a href="index.html" style="text-decoration: none; color: white" draggable="false">Prosekator</a></h1>
+    </div>
+
+    <div class="headerBar">
+        <nav>
+            <div class="hamburgerMenu" id="hamburgerMenu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="headerLinks" id="navLinks">
+                <li><a href="./index.html" draggable="false">Početna</a></li>
+                <li><a href="./about.html" draggable="false">O Prosekatoru</a></li>
+                <li><a href="./login.html" draggable="false">Uloguj se</a></li>
+                <li><a href="./contact.html" draggable="false">Kontaktiraj nas</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</header>
+</div>
+
+<div class="signupMain">
+    <div class="signupContainer">
+        <h2>Registruj se za novi nalog</h2>
+        <form action="#" method="post" class="signupForm">
+            <label for="username">Korisničko ime:</label>
+            <input type="text" id="usernameMain" name="username" required>
+
+            <label for="email">Email adresa:</label>
+            <input type="email" id="emailMain" name="email" required>
+
+            <label for="password">Lozinka:</label>
+            <input type="password" id="passwordMain" name="password" required>
+
+            <button type="submit">Registruj se</button>
+        </form>
+    </div>
+
+</body>
+</html>

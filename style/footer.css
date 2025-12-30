@@ -1,0 +1,40 @@
+.indexFooter {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    opacity: 0.6;
+}
+
+.aboutFooter {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    opacity: 0.6;
+}
+
+.loginFooter {
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    opacity: 0.6;
+}
+
+.footerDiv {
+    margin-top: 400px;
+    text-align: center;
+}
+
+.aboutFooter p {
+    margin: 0;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+}

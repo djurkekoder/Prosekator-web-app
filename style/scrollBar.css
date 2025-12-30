@@ -1,0 +1,31 @@
+/* --- CUSTOM SCROLLBAR --- */
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #1a1a1a; 
+}
+
+/* Thumb scroll bar */
+::-webkit-scrollbar-thumb {
+    background: #aee203; 
+    border-radius: 10px; 
+    border: 2px solid #1a1a1a; 
+    box-shadow: 0 0 5px rgba(134, 208, 94, 0.5); 
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #B4D63D; 
+    box-shadow: 0 0 10px rgba(180, 214, 61, 0.8); 
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: #46A9B6; 
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #aee203 #1a1a1a;
+}

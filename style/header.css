@@ -1,0 +1,155 @@
+/* background and font*/
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #181821;
+    color: white;
+    user-select: none;
+}
+/* header layout */
+.header {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 60px;
+}
+/* push nav to the top right */
+.headerBar {
+    margin-left: auto;
+}
+/* nav list */
+.headerLinks {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+    margin-top: 28px;
+    padding: 0;
+    
+}
+/* nav links */
+.headerLinks li a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+    user-select: none;
+}
+/* title */
+.headerTitle h1 {
+    margin-top: 18px;
+}
+.headerTitle p {
+    margin: 4px 0 0;
+}
+/* logo */
+.headerLogo img {
+    width: 150px;
+    height: auto;
+    margin-left: 40px;
+}
+.headerLinks li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Inter, sans-serif;
+
+    /* white glow */
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.8),
+        0 0 10px rgba(255, 255, 255, 0.6),
+        0 0 20px rgba(255, 255, 255, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+.headerLinks li a:hover {
+    /* half green / half blue */
+    background: linear-gradient(
+        90deg,
+        #B4D63D 0%,
+        #9FD44A 14%,
+        #86D05E 28%,
+        #6ACB78 42%,
+        #52C2A2 56%,
+        #46A9B6 70%,
+        #3F82C4 85%,
+        #3A60CA 100%
+    
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-shadow:
+        0 0 10px rgba(46, 204, 113, 0.6),
+        0 0 10px rgba(52, 152, 219, 0.6);
+}
+/* HEADER TITLE – default glow */
+.headerTitle h1,
+.headerTitle p {
+    color: white;
+    font-family: Inter, sans-serif;
+    cursor: pointer;
+
+    text-shadow:
+        0 0 6px rgba(255, 255, 255, 0.9),
+        0 0 14px rgba(255, 255, 255, 0.6),
+        0 0 24px rgba(255, 255, 255, 0.4);
+
+    transition: all 0.3s ease;
+}
+
+/* HEADER TITLE – hover half green / half blue */
+.headerTitle h1:hover,
+.headerTitle p:hover {
+    background: linear-gradient(
+        90deg,
+        #B4D63D 0%,
+        #9FD44A 14%,
+        #86D05E 28%,
+        #6ACB78 42%,
+        #52C2A2 56%,
+        #46A9B6 70%,
+        #3F82C4 85%,
+        #3A60CA 100%
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+
+    text-shadow:
+        0 0 12px rgba(46, 204, 113, 0.6),
+        0 0 12px rgba(52, 152, 219, 0.6);
+}
+/* Ultra-tight glowing logo */
+.headerLogo img {
+    width: 120px; /* adjust size */
+    height: auto;
+    transition: 0.3s ease;
+
+    /* Tighter glow around the image */
+    filter: drop-shadow(0 0 0.5px #B4D63D)
+            drop-shadow(0 0 1px #9FD44A)
+            drop-shadow(0 0 1.5px #86D05E)
+            drop-shadow(0 0 2px #6ACB78)
+            drop-shadow(0 0 2.5px #52C2A2)
+            drop-shadow(0 0 3px #46A9B6)
+            drop-shadow(0 0 3.5px #3F82C4)
+            drop-shadow(0 0 4px #3A60CA);
+}
+
+/* Stronger glow on hover */
+.headerLogo img:hover {
+    filter: drop-shadow(0 0 1px #B4D63D)
+            drop-shadow(0 0 1.5px #9FD44A)
+            drop-shadow(0 0 2px #86D05E)
+            drop-shadow(0 0 2.5px #6ACB78)
+            drop-shadow(0 0 3px #52C2A2)
+            drop-shadow(0 0 3.5px #46A9B6)
+            drop-shadow(0 0 4px #3F82C4)
+            drop-shadow(0 0 4.5px #3A60CA)
+            drop-shadow(0 0 5px #2650c5);
+}
