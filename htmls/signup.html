@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prosekator - Registruj se</title>
+    <title>Prosekator - Uloguj se</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,9 +17,10 @@
     <link rel="stylesheet" href="../style/scrollBar.css">
 
     <script src="../script/hamburgerBar.js" defer></script>
+    <script src="../script/login.js" defer></script>
 </head>
 <body>
-    
+
 <div class="headerDiv">
 <header class="header">
 
@@ -34,15 +35,19 @@
     <div class="headerBar">
         <nav>
             <div class="hamburgerMenu" id="hamburgerMenu">
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </div>
             <ul class="headerLinks" id="navLinks">
+
                 <li><a href="./index.html" draggable="false">Početna</a></li>
                 <li><a href="./about.html" draggable="false">O Prosekatoru</a></li>
-                <li><a href="./login.html" draggable="false">Uloguj se</a></li>
+                <li><a href="./login.html" draggable="false">Prijavi se</a></li>
                 <li><a href="./contact.html" draggable="false">Kontaktiraj nas</a></li>
+
             </ul>
         </nav>
     </div>
@@ -50,21 +55,40 @@
 </header>
 </div>
 
-<div class="signupMain">
-    <div class="signupContainer">
-        <h2>Registruj se za novi nalog</h2>
-        <form action="#" method="post" class="signupForm">
-            <label for="username">Korisničko ime:</label>
-            <input type="text" id="usernameMain" name="username" required>
+<div class="loginMain">
+    <div class="loginContainer">
+        <h1 class="loginMainTitle">Kreiraj svoj nalog</h1>
 
-            <label for="email">Email adresa:</label>
-            <input type="email" id="emailMain" name="email" required>
+        <form method="post" class="loginFormMain" novalidate>
 
-            <label for="password">Lozinka:</label>
-            <input type="password" id="passwordMain" name="password" required>
+            <div class="input-group">
+                <label for="username">Korisničko ime:</label>
+                <input type="text" id="usernameMain" name="username" required>
+                <div class="error-tooltip">Popunite ovo polje</div>
+            </div>
 
-            <button type="submit">Registruj se</button>
+            <div class="input-group">
+                <label for="username">Email:</label>
+                <input type="text" id="usernameMain" name="username" required>
+                <div class="error-tooltip">Popunite ovo polje</div>
+            </div>
+
+            <div class="input-group">
+                <label for="password">Lozinka:</label>
+                <input type="password" id="passwordMain" name="password" required>
+                <div class="error-tooltip">Popunite ovo polje</div>
+            </div>
+
+            <button type="submit" class="loginButtonMain">Kreiraj nalog</button>
+            <p class="signupPrompt">Imate nalog? <a href="./login.html"> Prijavite se</a></p>
+
         </form>
+    </div>
+</div>
+
+    <div class="footerDiv">
+    <footer class="loginFooter">
+        <p>&copy; 2026 Prosekator. Sva prava zadržana.</p>
     </div>
 
 </body>
