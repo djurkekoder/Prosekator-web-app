@@ -1,0 +1,202 @@
+.indexMain {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    padding: 60px 20px;
+}
+
+.indexContainer {
+    background-color: #1a1a1a;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.indexMainTitle {
+    font-size: 32px;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Average section */
+.overall-average-section {
+    margin-bottom: 25px;
+}
+
+#finalAverage {
+    font-size: 52px;
+    margin: 5px 0;
+    color: #B4D63D;
+    text-shadow: 0 0 20px rgba(180, 214, 61, 0.3);
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 20px 0;
+}
+
+/* Subject Input Section */
+.add-subject-section {
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    position: relative;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-subject-section input {
+    width: 100%;
+    background-color: #242431;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 12px;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+.add-subject-section input:focus {
+    border-color: #B4D63D;
+}
+
+/* Button gradient effect */
+#addSubjectBtn {
+    height: 45px;
+    background: #2a2a3a;
+    border: none;
+    border-radius: 8px;
+    padding: 0 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addSubjectBtn:hover {
+    background: linear-gradient(90deg, 
+        #B4D63D 0%,
+        #9FD44A 14%, 
+        #86D05E 28%, 
+        #6ACB78 42%, 
+        #52C2A2 56%, 
+        #46A9B6 70%, 
+        #3F82C4 85%, 
+        #3A60CA 100%
+    );
+    box-shadow: 0 5px 15px rgba(134, 208, 94, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Subject Card */
+.subject-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 4px solid var(--subject-color, #3A60CA); 
+    transition: transform 0.2s ease;
+    animation: slideInUp 0.4s ease-out forwards;
+}
+
+.subject-info { text-align: left; }
+.subject-info h3 { margin: 0 0 8px 0; font-size: 17px; color: white; }
+
+.grade-badge {
+    background: #2a2a3a;
+    color: var(--subject-color, #86D05E);
+    padding: 3px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    margin-right: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.add-grade-btn {
+    background: none;
+    border: 1px dashed #B4D63D;
+    color: #B4D63D;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+
+.sub-avg-val {
+    color: #B4D63D;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+/* Error Tooltip */
+.error-tooltip {
+    position: absolute;
+    bottom: calc(100% + 10px); 
+    left: 50%;
+    transform: translateX(-50%) translateY(5px);
+    background-color: #1a1a1a;
+    color: #B4D63D;
+    border: 1.5px solid #B4D63D;
+    padding: 6px 15px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: nowrap;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.error-tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #B4D63D transparent transparent transparent;
+}
+
+.error-tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.add-subject-section input.invalid-field {
+    border-color: #B4D63D !important; /* Tvoja zelena boja */
+    box-shadow: 0 0 10px rgba(180, 214, 61, 0.3);
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

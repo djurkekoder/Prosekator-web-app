@@ -72,12 +72,6 @@
     font-size: 15px;
 }
 
-.contactFormMain label {
-    margin-bottom: 8px;
-    font-size: 14px;
-    opacity: 0.8;
-}
-
 .contactFormMain {
     display: flex;
     flex-direction: column;
@@ -94,6 +88,7 @@
     font-size: 14px;
     margin-bottom: 8px;
     display: block;
+    opacity: 0.8;
 }
 
 .contactFormMain input, 
@@ -161,14 +156,14 @@
     transform: translateY(-1px);
 }
 
-/* Validation  */
+/* Error Tooltip */
 
 .error-tooltip {
     position: absolute;
-    bottom: 105%;
+    bottom: 100%; 
     left: 0;
-    background: #1a1a1a;
-    color: #B4D63D;
+    background: #1a1a1a; 
+    color: #B4D63D; 
     border: 1px solid #B4D63D;
     padding: 6px 12px;
     border-radius: 6px;
@@ -178,8 +173,9 @@
     pointer-events: none;
     opacity: 0;
     transform: translateY(10px);
-    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 0.3s ease;
     z-index: 100;
+    margin-bottom: 5px;
 }
 
 .error-tooltip::after {
@@ -195,4 +191,12 @@
 .error-tooltip.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ISPRAVLJENO: Dodata textarea i outline: none */
+.contactFormMain input.invalid-field,
+.contactFormMain textarea.invalid-field {
+    border-color: #B4D63D !important;
+    box-shadow: 0 0 10px rgba(180, 214, 61, 0.2) !important;
+    outline: none !important;
 }

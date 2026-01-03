@@ -178,7 +178,7 @@
     filter: brightness(1.2);
 }
 
-/* Validation text styling */
+/* Error Tooltip */
 .input-group {
     position: relative;
     display: flex;
